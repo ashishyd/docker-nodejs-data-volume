@@ -1,6 +1,9 @@
 To build image
 `docker build -t feedback-node:volumes . `
 
+To build image with arguments
+`docker build -t feedback-node:dev --build-arg DEFAULT_PORT=8000 .`
+
 To run container with named volume and bind mount
 
 `docker run -p 3000:80 -d --name feedback-app --rm -v feedback:/app/feedback -v ${pwd}:/app -v /app/node_modules feedback-node:volumes`
