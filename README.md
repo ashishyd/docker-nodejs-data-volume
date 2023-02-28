@@ -2,9 +2,11 @@ To build image
 `docker build -t feedback-node:volumes . `
 
 To run container with named volume and bind mount
+
 `docker run -p 3000:80 -d --name feedback-app --rm -v feedback:/app/feedback -v ${pwd}:/app -v /app/node_modules feedback-node:volumes`
 
 To run container with named volume and bind mount with read only volume
+
 `docker run -p 3000:80 -d --name feedback-app --rm -v feedback:/app/feedback -v ${pwd}:/app:ro -v /app/node_modules -v /app/temp feedback-node:volumes`
 
 To stop container
